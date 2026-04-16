@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Squishly — Squeeze the Stress Away</title>
+    <meta
+      name="description"
+      content="Squishly mystery boxes with squishy toys and sensory fidgets. Reserve your preorder spot today."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav-wrap">
+      <nav class="nav container">
+        <a href="#home" class="brand">Squishly</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#preorder" class="btn btn-primary">Preorder</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Mystery Sensory Boxes</p>
+            <h1>Squishly</h1>
+            <p class="tagline">Squeeze the Stress Away</p>
+            <p class="subtext">
+              Premium surprise boxes packed with satisfying squishy toys, stress balls, and sensory fidgets.
+            </p>
+            <div class="hero-actions">
+              <a href="#preorder" class="btn btn-primary">Preorder Now</a>
+              <a href="#shop" class="btn btn-outline">See Boxes</a>
+            </div>
+          </div>
+          <div class="blob-wrap" aria-hidden="true">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shop" class="section">
+        <div class="container">
+          <h2>Choose Your Box</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Mini Box</h3>
+              <p>3 curated squishies for a quick daily reset.</p>
+              <p class="price">$19</p>
+              <a href="#preorder" class="btn btn-outline">Preorder</a>
+            </article>
+            <article class="card popular">
+              <p class="badge">Most Popular</p>
+              <h3>Medium Box</h3>
+              <p>6 satisfying picks with texture variety and calming colors.</p>
+              <p class="price">$34</p>
+              <a href="#preorder" class="btn btn-primary">Preorder</a>
+            </article>
+            <article class="card">
+              <h3>Mega Box</h3>
+              <p>10 premium squishies for max stress relief and fun.</p>
+              <p class="price">$49</p>
+              <a href="#preorder" class="btn btn-outline">Preorder</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section alt">
+        <div class="container">
+          <h2>How It Works</h2>
+          <div class="steps">
+            <article><h3>1. Pick a Box</h3><p>Choose Mini, Medium, or Mega.</p></article>
+            <article><h3>2. Reserve Your Spot</h3><p>Submit your preorder in under a minute.</p></article>
+            <article><h3>3. Get Your Surprise</h3><p>We ship your box once drops go live.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Why Squishly</h2>
+          <div class="steps">
+            <article><h3>Stress Relief</h3><p>Soft textures designed for calm focus.</p></article>
+            <article><h3>Trendy Drops</h3><p>Seasonal picks inspired by Gen Z aesthetics.</p></article>
+            <article><h3>Gift-Ready</h3><p>Cute packaging made for sharing and unboxing.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="preorder" class="section alt">
+        <div class="container preorder">
+          <div>
+            <h2>Reserve Your Spot</h2>
+            <p>Limited spots for first drop. Join the list now.</p>
+          </div>
+          <form id="preorder-form" novalidate>
+            <label>Name<input type="text" name="name" required /></label>
+            <label>Email<input type="email" name="email" required /></label>
+            <label>
+              Box
+              <select name="box" required>
+                <option value="">Select a box</option>
+                <option>Mini Box</option>
+                <option>Medium Box</option>
+                <option>Mega Box</option>
+              </select>
+            </label>
+            <label>
+              Quantity
+              <select name="quantity" required>
+                <option value="">Choose</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary">Reserve My Spot</button>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Squishly. All rights reserved.</p>
+        <p>hello@squishly.me</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
