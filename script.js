@@ -9,9 +9,9 @@ if (form && message) {
     event.preventDefault();
     message.classList.remove("is-success", "is-error");
     if (!form.checkValidity()) {
+      form.reportValidity();
       message.textContent = "Please complete all fields.";
       message.classList.add("is-error");
-      form.reportValidity();
       return;
     }
     message.textContent = "You’re on the list.";

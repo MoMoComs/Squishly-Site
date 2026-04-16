@@ -35,10 +35,10 @@ h2 { font-size: clamp(2rem, 5vw, 2.8rem); text-align: center; }
 .subtext { max-width: 52ch; }
 .hero-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1rem; }
 
-.btn { display: inline-block; border-radius: 999px; padding: .72rem 1.3rem; font-weight: 800; text-decoration: none; border: 2px solid transparent; }
+.btn { display: inline-block; border-radius: 999px; padding: .72rem 1.3rem; font-weight: 800; text-decoration: none; border: 2px solid transparent; transition: transform .15s ease, box-shadow .2s ease; }
 .btn-primary { background: linear-gradient(135deg, var(--purple), var(--pink)); color: #2f184f; box-shadow: 0 10px 20px rgba(201,167,255,.35); }
 .btn-outline { border-color: var(--purple); color: #6b43a4; background: #fff; }
-.btn:hover { transform: translateY(-1px); }
+.btn:hover, .btn:focus-visible { transform: translateY(-1px); }
 
 .blob-wrap { position: relative; min-height: 300px; }
 .blob { position: absolute; border-radius: 50%; filter: blur(1px); animation: float 7s ease-in-out infinite; }
@@ -48,8 +48,8 @@ h2 { font-size: clamp(2rem, 5vw, 2.8rem); text-align: center; }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
 
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.4rem; }
-.card { background: #fff; border-radius: 18px; padding: 1.2rem; box-shadow: 0 10px 24px rgba(77,47,122,.08); border: 1px solid rgba(77,47,122,.08); }
-.card:hover { transform: translateY(-4px); }
+.card { background: #fff; border-radius: 18px; padding: 1.2rem; box-shadow: 0 10px 24px rgba(77,47,122,.08); border: 1px solid rgba(77,47,122,.08); transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover, .card:focus-within { transform: translateY(-4px); }
 .popular { border-color: var(--purple); position: relative; }
 .badge { position: absolute; top: -12px; right: 12px; background: var(--purple); color: #fff; border-radius: 999px; padding: .25rem .6rem; font-size: .8rem; font-weight: 800; }
 .price { font-size: 1.45rem; font-weight: 900; margin: .8rem 0; }
