@@ -2,7 +2,7 @@ const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 const yearEl = document.getElementById('year');
 const form = document.getElementById('preorderForm');
-const confirmEl = document.getElementById('confirm');
+const confirmationElement = document.getElementById('confirm');
 
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
@@ -28,6 +28,9 @@ document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!form.reportValidity()) return;
-  confirmEl.textContent = "You're on the list.";
+  confirmationElement.textContent = '';
+  setTimeout(() => {
+    confirmationElement.textContent = "You're on the list.";
+  }, 150);
   form.reset();
 });
