@@ -28,9 +28,6 @@ document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!form.reportValidity()) return;
-  confirmationElement.textContent = '';
-  setTimeout(() => {
-    confirmationElement.textContent = "You're on the list.";
-  }, 150);
+  confirmationElement.textContent = "You're on the list.";
   form.reset();
 });
