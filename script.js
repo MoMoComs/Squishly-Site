@@ -11,13 +11,11 @@ if (form && message) {
     if (!form.checkValidity()) {
       message.textContent = "Please complete all fields.";
       message.classList.add("is-error");
-      message.setAttribute("aria-live", "assertive");
       form.reportValidity();
       return;
     }
     message.textContent = "You’re on the list.";
     message.classList.add("is-success");
-    message.setAttribute("aria-live", "polite");
     form.reset();
   });
 }
