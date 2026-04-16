@@ -109,26 +109,28 @@
             <p>Limited spots for first drop. Join the list now.</p>
           </div>
           <form id="preorder-form">
-            <label>Name<input type="text" name="name" required /></label>
-            <label>Email<input type="email" name="email" required /></label>
-            <label>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required />
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+            <label for="box">
               Box
-              <select name="box" required>
-                <option value="">Select a box</option>
-                <option>Mini Box</option>
-                <option>Medium Box</option>
-                <option>Mega Box</option>
-              </select>
             </label>
-            <label>
+            <select id="box" name="box" required>
+              <option value="">Select a box</option>
+              <option>Mini Box</option>
+              <option>Medium Box</option>
+              <option>Mega Box</option>
+            </select>
+            <label for="quantity">
               Quantity
-              <select name="quantity" required>
-                <option value="">Choose</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
             </label>
+            <select id="quantity" name="quantity" required>
+              <option value="">Choose</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
             <button type="submit" class="btn btn-primary">Reserve My Spot</button>
             <p id="form-message" class="form-message" aria-live="polite"></p>
           </form>
