@@ -1,21 +1,23 @@
 const form = document.getElementById("preorder-form");
-const message = document.getElementById("form-message");
+const errorMessage = document.getElementById("form-error-message");
+const successMessage = document.getElementById("form-success-message");
 const year = document.getElementById("year");
 
 if (year) year.textContent = new Date().getFullYear();
 
-if (form && message) {
+if (form && errorMessage && successMessage) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    message.classList.remove("is-success", "is-error");
+    errorMessage.textContent = "";
+    successMessage.textContent = "";
     if (!form.checkValidity()) {
+      const invalid = form.querySelector(":invalid");
+      const fieldName = invalid?.labels?.[0]?.textContent?.trim() || "required fields";
       form.reportValidity();
-      message.textContent = "Please complete all fields.";
-      message.classList.add("is-error");
+      errorMessage.textContent = `Please complete the ${fieldName.toLowerCase()} field correctly.`;
       return;
     }
-    message.textContent = "You’re on the list.";
-    message.classList.add("is-success");
+    successMessage.textContent = "You’re on the list.";
     form.reset();
   });
 }
